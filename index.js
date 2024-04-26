@@ -149,3 +149,13 @@ setTimeout(() => {
 client.login(config.token || process.env.token).catch((err) => {
   console.log(err.message)
 })
+
+
+
+app.post("/uptime_devtools", (req, res) => {
+ console.log("uptime is run by Developer tools")
+  res.send({
+    msg: "done uptime",
+    access: "by_devtools",
+  })
+})
